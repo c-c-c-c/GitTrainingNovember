@@ -23,8 +23,8 @@ public class FlipperManager : MonoBehaviour {
             if (angleCount <= 12)
             {
                 rightFlipper.transform.RotateAround(
-                    new Vector3(-2f, 0.4f, -1.2f),
-                    new Vector3(0, 1.7f, 1f),
+                    rotateCenter,
+                    rotateAxis,
                     flipSpeed * Time.deltaTime );
 
                 angleCount++;
@@ -40,8 +40,8 @@ public class FlipperManager : MonoBehaviour {
             if ( 0 < angleCount )
             {
                 rightFlipper.transform.RotateAround(
-                new Vector3(-2f, 0.4f, -1.2f),
-                new Vector3(0, 1.7f, 1f),
+                rotateCenter,
+                rotateAxis,
                 -flipSpeed * Time.deltaTime);
                 angleCount--;
 

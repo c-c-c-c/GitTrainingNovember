@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManger : MonoBehaviour {
 
+    private int score;
+    public UnityEngine.UI.Text scoreLabel;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,4 +16,10 @@ public class GameManger : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void ScoreUpdate(int point)
+    {
+        score = score + point;
+        scoreLabel.text = "Score:" + score.ToString("D4");
+    }
 }

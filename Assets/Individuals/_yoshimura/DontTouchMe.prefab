@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 23654290711904702}
   - component: {fileID: 135710313354952002}
   - component: {fileID: 54312382175069714}
+  - component: {fileID: 114117902885491564}
   m_Layer: 0
   m_Name: ballPrefab
   m_TagString: Untagged
@@ -290,6 +291,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114117902885491564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206051355625474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18605c4d9480d944b853841febe6af28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114801206804091334
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,24 +6,33 @@ public class FlipperManager : MonoBehaviour {
 
     public GameObject rightFlipper;
     public GameObject leftFlipper;
-    Vector3 rotateCenterR = new Vector3(-1.4f, 0.4f, -1f); //回転の中心位置
-    Vector3 rotateCenterL = new Vector3(1.4f, 0.4f, -1f); //回転の中心位置
+    Vector3 rotateCenterR = new Vector3(-1.9f, 0.4f, -1f); //回転の中心位置
+    Vector3 rotateCenterL = new Vector3(1.9f, 0.4f, -1f); //回転の中心位置
     int angleCountR = 0;
     int angleCountL = 0;
-    public float flipSpeed = 500;
+    public float flipSpeed ;
     Vector3 norm;
+    Vector3 rightDefaultPos;
+    Vector3 leftDefaultPos;
     Quaternion rightDefaultRot;
     Quaternion leftDefaultRot;
+    Rigidbody rrb;
+    Rigidbody lrb;
 
     // Use this for initialization
     void Start () {
         Rigidbody rRigidBody = rightFlipper.GetComponent<Rigidbody>();
 
         GameObject cube = GameObject.Find("__CubeMeyasu");
-        norm = cube.transform.rotation * new Vector3(0, 1, 0);
+        norm = cube.transform.rotation * Vector3.up;
         rightDefaultRot = rightFlipper.transform.rotation;
         leftDefaultRot = leftFlipper.transform.rotation;
+        rightDefaultPos = rightFlipper.transform.position;
+        leftDefaultPos = leftFlipper.transform.position;
 
+        rrb = rightFlipper.GetComponent<Rigidbody>()  ;
+        lrb = leftFlipper.GetComponent<Rigidbody>()  ;
+        //rb.centerOfMass = rotateCenterR;
     }
 
     // Update is called once per frame
@@ -33,10 +42,8 @@ public class FlipperManager : MonoBehaviour {
 
             if (angleCountR <= 12)
             {
-                rightFlipper.transform.RotateAround(
-                    rotateCenterR,
-                    norm,
-                    flipSpeed * Time.deltaTime );
+
+                rrb.MoveRotation(Quaternion.AngleAxis( 4*angleCountR, norm));
 
                 angleCountR++;
             } else
@@ -49,16 +56,14 @@ public class FlipperManager : MonoBehaviour {
         {
             if ( 0 < angleCountR )
             {
-                rightFlipper.transform.RotateAround(
-                rotateCenterR,
-                norm,
-                -flipSpeed * Time.deltaTime);
+                rrb.MoveRotation(Quaternion.AngleAxis( -4*angleCountR, norm));
                 angleCountR--;
 
             } else
             {
                 //特定の位置に、、
                 rightFlipper.transform.rotation = rightDefaultRot;
+                rightFlipper.transform.position = rightDefaultPos;
             }
 
         }
@@ -67,10 +72,7 @@ public class FlipperManager : MonoBehaviour {
 
             if (angleCountL <= 12)
             {
-                leftFlipper.transform.RotateAround(
-                    rotateCenterL,
-                    norm,
-                    -flipSpeed * Time.deltaTime );
+                lrb.MoveRotation(Quaternion.AngleAxis( -4*angleCountL, norm));
 
                 angleCountL++;
             } else
@@ -79,20 +81,19 @@ public class FlipperManager : MonoBehaviour {
             }
 
 
+
         } else
         {
             if ( 0 < angleCountL )
             {
-                leftFlipper.transform.RotateAround(
-                    rotateCenterL,
-                    norm,
-                    flipSpeed * Time.deltaTime);
+                lrb.MoveRotation(Quaternion.AngleAxis( 4*angleCountL, norm));
                 angleCountL--;
 
             } else
             {
                 //特定の位置に、、
                 leftFlipper.transform.rotation = leftDefaultRot;
+                leftFlipper.transform.position = leftDefaultPos;
             }
 
         }

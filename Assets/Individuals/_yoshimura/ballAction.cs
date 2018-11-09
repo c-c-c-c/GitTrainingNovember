@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ballAction : MonoBehaviour {
 
     GameManger gameManager;
@@ -28,5 +27,11 @@ public class ballAction : MonoBehaviour {
         if ( other.gameObject.tag == "kugi" ) {
             gameManager.ScoreUpdate(30);
         }
+
+        if ( other.gameObject.tag == "GameOver" ) {
+            //gameManagerのゲームオーバー表示処理
+        }
+        
+
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ballAction : MonoBehaviour {
 
     GameManger gameManager;
@@ -14,7 +13,12 @@ public class ballAction : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+	    if ( Input.GetKeyDown(KeyCode.Space) )
+        {
+            this.transform.position = new Vector3( -3.43f, 1.99f, -3.81f);
+            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); ;
+            this.GetComponent<Rigidbody>().AddForce(new Vector3 (32, 50, -90), ForceMode.Impulse);
+        }	
 	}
 
     private void OnCollisionEnter(Collision other)
@@ -23,5 +27,11 @@ public class ballAction : MonoBehaviour {
         if ( other.gameObject.tag == "kugi" ) {
             gameManager.ScoreUpdate(30);
         }
+
+        if ( other.gameObject.tag == "GameOver" ) {
+            //gameManagerのゲームオーバー表示処理
+        }
+        
+
     }
 }

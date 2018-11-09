@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65046395112505434}
   - component: {fileID: 54224892678043768}
   m_Layer: 0
-  m_Name: rightFlipper
+  m_Name: leftFlipper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,25 @@ GameObject:
   - component: {fileID: 114117902885491564}
   m_Layer: 0
   m_Name: ballPrefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1276025799972774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4056512332968412}
+  - component: {fileID: 33728546980541648}
+  - component: {fileID: 23632166652646194}
+  - component: {fileID: 65454771141599186}
+  - component: {fileID: 54319619580961932}
+  m_Layer: 0
+  m_Name: rightFlipper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,6 +115,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4056512332968412
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276025799972774}
+  m_LocalRotation: {x: 0.25144875, y: -0.228871, z: -0.061325822, w: 0.93841934}
+  m_LocalPosition: {x: -1.08, y: 0.59, z: -0.6}
+  m_LocalScale: {x: 1.5247, y: 0.5, z: 0.2210902}
+  m_Children: []
+  m_Father: {fileID: 4935774292105396}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 26.35, y: -30.916002, z: -14.886001}
 --- !u!4 &4337587852752562
 Transform:
   m_ObjectHideFlags: 1
@@ -130,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 1206051355625474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.13, y: 3.64, z: -5.99}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 4935774292105396}
   m_RootOrder: 0
@@ -141,13 +173,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055533997413526}
-  m_LocalRotation: {x: 0.25144875, y: -0.228871, z: -0.061325822, w: 0.93841934}
-  m_LocalPosition: {x: -1.29, y: 0.54, z: -0.69}
-  m_LocalScale: {x: 1.5247, y: 0.2719579, z: 0.2210902}
+  m_LocalRotation: {x: 0.25144783, y: 0.22887233, z: 0.06132981, w: 0.938419}
+  m_LocalPosition: {x: 1.18, y: 0.59, z: -0.48}
+  m_LocalScale: {x: 1.5246999, y: 0.5, z: 0.22109003}
   m_Children: []
   m_Father: {fileID: 4935774292105396}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 26.35, y: -30.916002, z: -14.886001}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 26.35, y: 30.916, z: 14.886}
 --- !u!4 &4935774292105396
 Transform:
   m_ObjectHideFlags: 1
@@ -159,12 +191,48 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4733046089325912}
-  - {fileID: 4865464653710358}
+  - {fileID: 4056512332968412}
   - {fileID: 4652427396725726}
   - {fileID: 4337587852752562}
+  - {fileID: 4865464653710358}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23632166652646194
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276025799972774}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23654290711904702
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -242,6 +310,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055533997413526}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &33728546980541648
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276025799972774}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33956603316104466
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -279,12 +354,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!54 &54319619580961932
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276025799972774}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65046395112505434
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055533997413526}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65454771141599186
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276025799972774}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -313,8 +415,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d645252984af00c48adf07f93520366d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightFlipper: {fileID: 1055533997413526}
-  flipSpeed: 200
+  rightFlipper: {fileID: 1276025799972774}
+  leftFlipper: {fileID: 1055533997413526}
+  flipSpeed: 500
 --- !u!135 &135710313354952002
 SphereCollider:
   m_ObjectHideFlags: 1

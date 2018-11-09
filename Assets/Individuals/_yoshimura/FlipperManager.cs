@@ -82,6 +82,7 @@ public class FlipperManager : MonoBehaviour {
 
 
 
+
         } else
         {
             if ( 0 < angleCountL )

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -387,6 +387,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 27.990002, y: -177.867, z: 1.0020001}
+--- !u!1001 &558283526
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4305592477155796, guid: 7aee8ed1f67c4d747b38e9bed7e9277a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.3870506
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305592477155796, guid: 7aee8ed1f67c4d747b38e9bed7e9277a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 9.127447
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305592477155796, guid: 7aee8ed1f67c4d747b38e9bed7e9277a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -22.364752
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305592477155796, guid: 7aee8ed1f67c4d747b38e9bed7e9277a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305592477155796, guid: 7aee8ed1f67c4d747b38e9bed7e9277a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305592477155796, guid: 7aee8ed1f67c4d747b38e9bed7e9277a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305592477155796, guid: 7aee8ed1f67c4d747b38e9bed7e9277a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305592477155796, guid: 7aee8ed1f67c4d747b38e9bed7e9277a, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955217824704116, guid: 7aee8ed1f67c4d747b38e9bed7e9277a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7aee8ed1f67c4d747b38e9bed7e9277a, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1012872973
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +832,10 @@ Prefab:
     - target: {fileID: 1716313777116178, guid: 00dac2de36f6acc4ba33541d987223d4, type: 2}
       propertyPath: m_Name
       value: DontTouchMeYoshimura
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716313777116178, guid: 00dac2de36f6acc4ba33541d987223d4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00dac2de36f6acc4ba33541d987223d4, type: 2}

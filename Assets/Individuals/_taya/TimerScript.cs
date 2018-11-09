@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TimerScript : MonoBehaviour
 {
     private int min;
     private float sec;
     private float oldSec;
-    public UnityEngine.UI.Text timerText;
+    [SerializeField]
+    private TextMeshProUGUI timerText;
 
     void Start()
     {

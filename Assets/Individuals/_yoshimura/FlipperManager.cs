@@ -70,7 +70,7 @@ public class FlipperManager : MonoBehaviour {
                 leftFlipper.transform.RotateAround(
                     rotateCenterL,
                     norm,
-                    flipSpeed * Time.deltaTime );
+                    -flipSpeed * Time.deltaTime );
 
                 angleCountL++;
             } else
@@ -84,9 +84,9 @@ public class FlipperManager : MonoBehaviour {
             if ( 0 < angleCountL )
             {
                 leftFlipper.transform.RotateAround(
-                rotateCenterL,
-                norm,
-                -flipSpeed * Time.deltaTime);
+                    rotateCenterL,
+                    norm,
+                    flipSpeed * Time.deltaTime);
                 angleCountL--;
 
             } else
